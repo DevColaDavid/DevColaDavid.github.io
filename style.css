@@ -1,0 +1,32 @@
+/* HERO */
+.HomePage {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    line-height: 1.5;
+    padding: 15px;
+}
+.homepage_action_btn{
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.homepage_action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+}
+
+.homepage_action_btn:active{
+    scale: 0.95;
+}
