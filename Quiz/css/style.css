@@ -81,13 +81,25 @@ body {
     cursor: pointer;
     display: inline-block;
 }
+.quiz-box .question-text{
+    width: auto;
+}
+
 .quiz-box .question-number,
-.quiz-box .question-text,
 .quiz-box .option-container,
-.quiz-box .next-button-btn
+.quiz-box .next-button-btn,
 .quiz-box .answers-indicator{
     width: 100%;
     float: left;
+}
+.quiz-box .calculator-btn{
+    background-color:#fff;
+    float: right;
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
 }
 .quiz-box .question-number{
     font-size: 18px;
@@ -210,6 +222,23 @@ margin-top: 15px;
     display: none;
 }
 
+/* calculator */
+.calculator{
+    background-color: aliceblue;
+    align-self: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    outline: none;
+    padding: 15px;
+    font-size:25px;
+    font-weight: 800;
+}
+.calculator.hide{
+    display: none;
+}
+
+/* end of calculator */
 
 .result-box h1{
     font-size: 36px;
@@ -244,3 +273,4 @@ margin-top: 15px;
         padding: 15px;
     }
 }
+
