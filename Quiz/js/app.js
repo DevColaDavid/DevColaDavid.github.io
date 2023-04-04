@@ -1,5 +1,7 @@
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
+const questionAuthor = document.querySelector(".question-author");
+const questionId = document.querySelector(".question-Id");
 const optionContainer = document.querySelector(".option-container");
 const answersIndicatorContainer = document.querySelector(".answers-indicator");
 const homeBox = document.querySelector(".home-box");
@@ -31,6 +33,8 @@ function getNewQuestion(){
     const questionIndex = availableQuestions[Math.floor(Math.random()* availableQuestions.length)];
     currentQuestion = questionIndex;
     questionText.innerHTML = currentQuestion.q;
+    questionAuthor.innerHTML = "Author:" + currentQuestion.author;
+    questionId.innerHTML =  "Id: " +currentQuestion.id;
     // get the postion of 'questionIndex' from the avaiableQuestion Array;
     const index1= availableQuestions.indexOf(questionIndex);
     // remove the 'questionIndex' from the avaiableQuestion Array, so that the question does not repeat
@@ -39,6 +43,7 @@ function getNewQuestion(){
     if(currentQuestion.hasOwnProperty('img')){
         const img = document.createElement("img");
         img.src = currentQuestion.img;
+        img.alt = currentQuestion.imgFailure;
         questionText.appendChild(img);
     }
 

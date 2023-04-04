@@ -114,8 +114,17 @@ body {
     color: #000000;
     line-height: 28px;
     font-weight: 400;
-    padding: 20px 0;
+    padding: 5px 0;
     margin: 0;
+}
+
+.quiz-box .question-author{
+    font-size: 12px;
+    font-weight: 800;
+}
+.quiz-box .question-Id{
+    font-size: 10px;
+    padding-bottom: 10px;
 }
 .quiz-box .question-text img{
     max-width: 100%;
@@ -224,7 +233,7 @@ margin-top: 15px;
 
 /* calculator */
 .calculator{
-    background-color: aliceblue;
+    background-color: white;
     align-self: auto;
     align-items: center;
     align-content: center;
