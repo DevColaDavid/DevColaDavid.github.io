@@ -26,8 +26,8 @@ const quiz = [
         id: 'M4',
         author: 'David M',
         q: 'What is the sum of (15+13+11+9+7+5+3+1+0-2-4-6-8-10-12-14-16)/2',
-        options: ['-4', '8', '2', '-1'],
-        Answer: 0,
+        options: ['-4',"8","2","-1"],
+        answer: 0,
         solution: "Because 15+13+11+9+7+5+3+1+0-2-4-6-8-10-12-14-16 = -8 and -8/2 = -4",
     },
     {
