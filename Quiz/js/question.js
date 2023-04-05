@@ -1,6 +1,7 @@
 const quiz = [
+    /* Math */
     {
-        id: '1',
+        id: 'M1',
         author: 'David Moon',
         q: '1&times;2&times;3&times;4&times;5&times;6&times;7&times;8&times;9&times;1&times;0&times;11&times;12&times;13&times;14&times;15&times;16&times;91',
         options: ['0', '-1', '-2', '3'],
@@ -8,21 +9,21 @@ const quiz = [
         solution: "0 time anything is 0",
     },
     {
-        id: '2',
+        id: 'M2',
         author: 'David Moon',
         q: 'What is the value of a if (6+1)x3x2+a=a^2? Write the answer as a integer.',
         options: ['7', '6', '5', '4'],
         answer: 0,
     },
     {
-        id: '3',
+        id: 'M3',
         author: 'David Moon',
         q: 'If someone added letters to make the word "David" with 5 letters into "Dwavido," with 7 letters, how much did the number of letters increase, in percent?',
         options: ['40', '30', '50', '20'],
         answer: 0,
     },
     {
-        id: '4',
+        id: 'M4',
         author: 'David M',
         q: 'What is the sum of (15+13+11+9+7+5+3+1+0-2-4-6-8-10-12-14-16)/2',
         options: ['-4', '8', '2', '-1'],
@@ -30,7 +31,7 @@ const quiz = [
         solution: "Because 15+13+11+9+7+5+3+1+0-2-4-6-8-10-12-14-16 = -8 and -8/2 = -4",
     },
     {
-        id: '5',
+        id: 'M5',
         author: 'David Moon / David Si',
         q: 'If a cat walks through all lines of the picture without moving on the same line twice, and starts from point A, which point will the cat end up in?',
         options: ['F', 'A', 'C', 'E'],
@@ -39,7 +40,7 @@ const quiz = [
         answer: 0,
     },
     {
-        id: '6',
+        id: 'M6',
         author: 'David Moon',
         q: 'Kamehameha I ate 5 pancakes, Kamehameha II ate 7 Pancakes, Liliuokalani ate 3 pancakes. If Moana ate more than all of them combined because she was just cooler, what is the least amount of pancakes that Moana could have eaten?',
         options: ['16', '26', '36', '6'],
@@ -47,59 +48,75 @@ const quiz = [
         solution: "If Moana ate more than the sum of everyone is pancake and to find the least value of pancake Moana ate we need to find the sum of everyone is eaten pan cake. However, it is just a sum but moana ate more so the least value we can add here is 1 so we add 15 and 1 then We get answer 16",
     },
     {
-        id: '7',
+        id: 'M7',
         author: 'David M',
         q: 'If 3 O is 5 A, 23 A is 8 H, and 10 H is 6 U, what is 69 O converted to U?',
         options: ['24', '28', '16', '23'],
         answer: 0,
     },
     {
-        id: '8',
+        id: 'M8',
         author: 'David Si',
         q: 'What is the sum of all possible values X? If 35/X = X+2',
         options: ['-2', '-4', '2', '3'],
         answer: 0,
     },
     {
-        id: '9',
+        id: 'M9',
         author: 'David Moon',
         q: 'What is x if 3(4+7x)+x+13=69?',
         options: ['2', '13', '15', '34'],
         answer: 0,
     },
     {
-        id: 'A',
+        id: 'MA',
         author: 'David Moon',
         q: 'If 1/(2x-7)=2x-7. What is -4x?',
         options: ['14', '24', '7', '16'],
         answer: 0,
     },
     {
-        id: 'B',
+        id: 'MB',
         author: 'David Si',
         q: "In the 30-60-90 triangle the shortest side has a length of 5ft. What is the length of the second longest side? Answer in radical form of nearest inch.",
         options: ['60 sqrt 3', '3 sqrt 5', '80 sqrt 42', '3 sqrt 2'],
         answer: 0,
     },
     {
-        id: 'C',
+        id: 'MC',
         author: 'David Si',
         q: 'A right triangle has side length of 3/5, 4/5, and X; what is the smallest X value, as an integer?',
         options: ['1', '2', '5', '5/5'],
         answer: 0,
     },
     {
-        id: 'D',
+        id: 'MD',
         author: 'David Si',
         q: 'What is 100011 base 2 in base 10?',
         options: ['69', '42', '200022', '3'],
         answer: 0,
     },
     {
-        id: '10',
+        id: 'M10',
         author: 'David Moon',
         q: 'If all interior angles of a pentagon are the same, what is one of the angles?',
         options: ['108', '115', '60', '55'],
+        answer: 0,
+    },
+    /* Science */
+    {
+        id: 'S1',
+        author: 'David Si',
+        q: "What does DNA stand for?",
+        options: ['Deoxyribonucleic Acid','Deoxys Nucletic Attack','Deoxibonuceleic Acid','Dionucletic Acid'],
+        answer: 0,
+    },
+    /* English */
+    {
+        id: 'E1',
+        author: 'David Si',
+        q: 'What is a closest synonym of abundant?',
+        options: ['Many','Eat','Amorphus','Acord'],
         answer: 0,
     }
 ]
