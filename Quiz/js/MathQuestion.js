@@ -1,5 +1,5 @@
-const quiz = [
-    /* Math */
+/* Math */
+quiz.push(
     {
         id: 'M1',
         author: 'David Moon',
@@ -102,21 +102,5 @@ const quiz = [
         q: 'If all interior angles of a pentagon are the same, what is one of the angles?',
         options: ['108', '115', '60', '55'],
         answer: 0,
-    },
-    /* Science */
-    {
-        id: 'S1',
-        author: 'David Si',
-        q: "What does DNA stand for?",
-        options: ['Deoxyribonucleic Acid','Deoxys Nucletic Attack','Deoxibonuceleic Acid','Dionucletic Acid'],
-        answer: 0,
-    },
-    /* English */
-    {
-        id: 'E1',
-        author: 'David Si',
-        q: 'What is a closest synonym of abundant?',
-        options: ['Many','Eat','Amorphus','Acord'],
-        answer: 0,
     }
-]
+)
