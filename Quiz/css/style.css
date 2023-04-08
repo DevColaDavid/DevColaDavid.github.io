@@ -153,6 +153,22 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+.quiz-box .solution-text {
+  background-color: #a6c0ef;
+  padding: 13px 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
 .quiz-box .option-container .option.already-answered {
   pointer-events: none;
 }

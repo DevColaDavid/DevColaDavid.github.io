@@ -96,15 +96,16 @@ function getResult(element){
         // add the indicator to correct mark
         updateAnswerIndicator("correct");
         correctAnswers++;
-        solutionText.classList.remove("hide");
+        // if there is 'solution' property than remove 'hide' class to show solution
+        if(currentQuestion.hasOwnProperty('solution')){
+            solutionText.classList.remove("hide");
+        }
     }
     else{
         //set the red color to the incorrect option
         element.classList.add("wrong");
         // add the indicator to wrong mark
         updateAnswerIndicator("wrong");
-
-
         // if the answer is incorrect the show the correct option by adding green color the correct option
         const optionLen = optionContainer.children.length;
         for(let i=0; i<optionLen; i++){
@@ -112,7 +113,10 @@ function getResult(element){
                 optionContainer.children[i].classList.add("correct");
             }
         }
-        solutionText.classList.remove("hide");
+        // if there is 'solution' property than remove 'hide' class to show solution
+        if(currentQuestion.hasOwnProperty('solution')){
+            solutionText.classList.remove("hide");
+        }
     }
     attempt++;
     unclickableOptions();
