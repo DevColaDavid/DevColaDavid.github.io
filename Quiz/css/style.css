@@ -48,6 +48,10 @@ body {
   display: none;
 }
 
+.solution-text.hide {
+  display: none;
+}
+
 .home-box h3 {
   font-size: 18px;
   color: #000000;
@@ -89,6 +93,7 @@ body {
 .quiz-box .question-number,
 .quiz-box .option-container,
 .quiz-box .next-button-btn,
+.quiz-box .solution-text,
 .quiz-box .answers-indicator {
   width: 100%;
   float: left;

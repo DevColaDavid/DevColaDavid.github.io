@@ -1,6 +1,8 @@
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
+const solutionText = document.querySelector(".solution-text");
 const questionAuthor = document.querySelector(".question-author");
+const questionSolution = document.querySelector(".question-solution");
 const questionId = document.querySelector(".question-Id");
 const optionContainer = document.querySelector(".option-container");
 const answersIndicatorContainer = document.querySelector(".answers-indicator");
@@ -35,9 +37,11 @@ function getNewQuestion(){
     questionText.innerHTML = currentQuestion.q;
     questionAuthor.innerHTML = "Author:" + currentQuestion.author;
     questionId.innerHTML =  "Id: " +currentQuestion.id;
-    // get the postion of 'questionIndex' from the avaiableQuestion Array;
+    solutionText.innerHTML = null;
+    solutionText.classList.add("hide");
+    // get the position of 'questionIndex' from the availableQuestion Array;
     const index1= availableQuestions.indexOf(questionIndex);
-    // remove the 'questionIndex' from the avaiableQuestion Array, so that the question does not repeat
+    // remove the 'questionIndex' from the availableQuestion Array, so that the question does not repeat
     availableQuestions.splice(index1,1);
     // show question image if 'img' property exists
     if(currentQuestion.hasOwnProperty('img')){
@@ -45,6 +49,10 @@ function getNewQuestion(){
         img.src = currentQuestion.img;
         img.alt = currentQuestion.imgFailure;
         questionText.appendChild(img);
+    }
+    // show question solution if 'solution' property exists
+    if(currentQuestion.hasOwnProperty('solution')){
+        solutionText.innerHTML = "Solution: " + currentQuestion.solution;
     }
 
     // set options
@@ -60,7 +68,7 @@ function getNewQuestion(){
     for(let i=0; i<optionLen; i++){
         // random option
         const optonIndex = availableOptions[Math.floor(Math.random()*availableOptions.length)];
-        // get the postion of 'optonIndex' from the availableOptions Array
+        // get the position of 'optonIndex' from the availableOptions Array
         const index2 = availableOptions.indexOf(optonIndex);
         // remove the 'optonIndex' from the availableOptions Array, so that the option does not repeat
         availableOptions.splice(index2,1);
@@ -81,18 +89,19 @@ function getNewQuestion(){
 // get the result of current attempt question
 function getResult(element){
     const id = parseInt(element.id);
-    // get the asnwer by comparing the id of clicked option
+    // get the answer by comparing the id of clicked option
     if(id === currentQuestion.answer){
        // set the green color to the correct option
         element.classList.add("correct");
         // add the indicator to correct mark
         updateAnswerIndicator("correct");
         correctAnswers++;
+        solutionText.classList.remove("hide");
     }
     else{
         //set the red color to the incorrect option
         element.classList.add("wrong");
-        // add the indicator to worng mark
+        // add the indicator to wrong mark
         updateAnswerIndicator("wrong");
 
 
@@ -103,12 +112,13 @@ function getResult(element){
                 optionContainer.children[i].classList.add("correct");
             }
         }
+        solutionText.classList.remove("hide");
     }
     attempt++;
     unclickableOptions();
 }
 
-// make all the options unclickable once the user selectr a option (RESTRICT THE USER TO CHANGE THE OPTION AGAIN)
+// make all the options unclickable once the user selects a option (RESTRICT THE USER TO CHANGE THE OPTION AGAIN)
 function unclickableOptions(){
     const optionLen = optionContainer.children.length;
     for(let i=0; i<optionLen; i++){
@@ -116,7 +126,7 @@ function unclickableOptions(){
     }
 }
 
-function answersIsndicator(){
+function answersIndicator(){
     answersIndicatorContainer.innerHTML = '';
     const totalQuestion = questionLimit;
     for(let i=0; i<totalQuestion; i++){
@@ -188,12 +198,12 @@ function startQuiz(){
     // show quiz Box
     quizBox.classList.remove("hide");
 
-    // first we will set all questions in aviavleQUestions Array
+    // first we will set all questions in availableQuestions Array
     setAvailableQuestion()
-    // second we will call getNewQuestion(); fuction
+    // second we will call getNewQuestion(); function
     getNewQuestion()
     // to create indicators of answers
-    answersIsndicator()
+    answersIndicator()
 }
 
 window.onload = function (){
