@@ -58,7 +58,7 @@ function getNewQuestion(){
     // set options
     // get the length of options
     const optionLen = currentQuestion.options.length;
-    // push option into avaiableOption Array
+    // push option into availableOption Array
     for(let i=0; i<optionLen; i++){
         availableOptions.push(i)
     }
@@ -67,14 +67,14 @@ function getNewQuestion(){
     // create options in html
     for(let i=0; i<optionLen; i++){
         // random option
-        const optonIndex = availableOptions[Math.floor(Math.random()*availableOptions.length)];
-        // get the position of 'optonIndex' from the availableOptions Array
-        const index2 = availableOptions.indexOf(optonIndex);
-        // remove the 'optonIndex' from the availableOptions Array, so that the option does not repeat
+        const optionIndex = availableOptions[Math.floor(Math.random()*availableOptions.length)];
+        // get the position of 'optionIndex' from the availableOptions Array
+        const index2 = availableOptions.indexOf(optionIndex);
+        // remove the 'optionIndex' from the availableOptions Array, so that the option does not repeat
         availableOptions.splice(index2,1);
         const option = document.createElement("div");
-        option.innerHTML = currentQuestion.options[optonIndex];
-        option.id = optonIndex;
+        option.innerHTML = currentQuestion.options[optionIndex];
+        option.id = optionIndex;
         option.style.animationDelay = animationDelay + 's';
         animationDelay = animationDelay + 0.15;
         option.className = "option";
@@ -119,11 +119,11 @@ function getResult(element){
         }
     }
     attempt++;
-    unclickableOptions();
+    notClickableOptions();
 }
 
-// make all the options unclickable once the user selects a option (RESTRICT THE USER TO CHANGE THE OPTION AGAIN)
-function unclickableOptions(){
+// make all the options notClickable once the user selects a option (RESTRICT THE USER TO CHANGE THE OPTION AGAIN)
+function notClickableOptions(){
     const optionLen = optionContainer.children.length;
     for(let i=0; i<optionLen; i++){
         optionContainer.children[i].classList.add("already-answered");
