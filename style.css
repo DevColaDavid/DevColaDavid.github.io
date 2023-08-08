@@ -1,10 +1,9 @@
 /* Basic */
 body {
   height: 100vh;
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(118, 180, 120);
   background-size: cover;
   background-position: center;
-  background-image: url(/image/Hawaii.png);
 }
 /* HERO */
 .HomePage {
@@ -18,8 +17,9 @@ body {
   line-height: 1.5;
   padding: 15px;
 }
+
 .homepage_action_btn {
-  background-color: orange;
+  background-color: rgb(44, 79, 48);
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;

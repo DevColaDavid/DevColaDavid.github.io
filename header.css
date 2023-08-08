@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-  color: orange;
+  color: rgb(44, 79, 48);
 }
 /* HEADER */
 header {
@@ -52,7 +52,7 @@ header {
 }
 
 .action_btn {
-  background-color: orange;
+  background-color:rgb(44, 79, 48);
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
