@@ -9,7 +9,7 @@ const answersIndicatorContainer = document.querySelector(".answers-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
-const questionLimit = 10; // if you want all question use quiz.length
+const questionLimit = 20; // if you want all question use quiz.length
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
