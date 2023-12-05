@@ -28,7 +28,7 @@ function setAvailableQuestion(){
 // set question number and question and options
 function getNewQuestion(){
     // set question number
-    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + questionLimit;
+    questionNumber.innerHTML = "Study Green";
 
     // set question text
     // get random question
@@ -81,8 +81,6 @@ function getNewQuestion(){
         optionContainer.appendChild(option)
         option.setAttribute("onclick","getResult(this)");
     }
-
-
     questionCounter++
 }
 
@@ -208,8 +206,4 @@ function startQuiz(){
     getNewQuestion()
     // to create indicators of answers
     answersIndicator()
-}
-
-window.onload = function (){
-    homeBox.querySelector(".total-question").innerHTML = questionLimit;
 }

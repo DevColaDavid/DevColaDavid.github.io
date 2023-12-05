@@ -290,12 +290,10 @@ body {
 
 /* calculator */
 .calculator {
-  background-color: white;
   align-self: auto;
   align-items: center;
   align-content: center;
   text-align: center;
-  outline: none;
   padding: 15px;
   font-size: 25px;
   font-weight: 800;
@@ -311,6 +309,7 @@ body {
 }
 
 #display {
+    background-color: rgb(255, 255, 255);
     text-align: right;
     height: 70px;
     line-height: 70px;
@@ -331,6 +330,7 @@ body {
 }
 
 .button {
+    background-color: rgb(255, 255, 255);
     border: 0.5px solid #999;
     line-height: 100px;
     text-align: center;
