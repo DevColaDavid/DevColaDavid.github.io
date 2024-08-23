@@ -6,8 +6,8 @@ body {
   background-position: center;
 }
 /* HERO */
-.HomePage {
-  height: calc(100vh - 60px);
+.intro {
+  height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,25 @@ body {
   line-height: 1.5;
   padding: 15px;
 }
-
+.outreach {
+  height: calc(0vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+  padding: 15px;
+}
+.Text1{
+  color: #fff;
+  padding: 0.05rem 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: bold;
+}
 .homepage_action_btn {
   background-color: rgb(44, 79, 48);
   color: #fff;

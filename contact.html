@@ -13,15 +13,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSSfiles/contact.css" />
+    <link rel="shortcut icon" href="image/D.png" type="image/x-icon" />
     <title>Contact</title>
   </head>
   <body>
     <header>
       <div class="navbar">
-        <div class="logo"><a href="#">Study Green</a></div>
+        <div class="logo"><a href="index.html">DevColaDavid</a></div>
         <ul class="links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -41,7 +40,24 @@
     </header>
 
     <main>
-      <section class="contact"></section>
+      <section class="contact">
+        <div class="contact-container">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+              <h2>Get in touch</h2>
+              <hr>
+            </div>
+            <input type="hidden" name="access_key" value="f01d9393-f4e5-4020-b422-9b83c9b7bc80">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="image/arrow_icon.png" alt=""></button>
+          </form>
+          <div class="contact-right">
+            <img src="image/right_img.png" alt="">
+          </div>
+        </div>
+      </section>
     </main>
 
     <script>

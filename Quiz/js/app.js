@@ -28,7 +28,7 @@ function setAvailableQuestion(){
 // set question number and question and options
 function getNewQuestion(){
     // set question number
-    questionNumber.innerHTML = "Study Green";
+    questionNumber.innerHTML = "Question number: 1";
 
     // set question text
     // get random question
@@ -89,17 +89,21 @@ function getResult(element){
     const id = parseInt(element.id);
     // get the answer by comparing the id of clicked option
     if(id === currentQuestion.answer){
-       // set the green color to the correct option
-        element.classList.add("correct");
-        // add the indicator to correct mark
-        updateAnswerIndicator("correct");
-        correctAnswers++;
         // if there is 'solution' property than remove 'hide' class to show solution
         if(currentQuestion.hasOwnProperty('solution')){
             solutionText.classList.remove("hide");
         }
+        // set the green color to the correct option
+        element.classList.add("correct");
+        // add the indicator to correct mark
+        updateAnswerIndicator("correct");
+        correctAnswers++;
     }
     else{
+        // if there is 'solution' property than remove 'hide' class to show solution
+        if(currentQuestion.hasOwnProperty('solution')){
+            solutionText.classList.remove("hide");
+        }
         //set the red color to the incorrect option
         element.classList.add("wrong");
         // add the indicator to wrong mark
@@ -110,10 +114,6 @@ function getResult(element){
             if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
                 optionContainer.children[i].classList.add("correct");
             }
-        }
-        // if there is 'solution' property than remove 'hide' class to show solution
-        if(currentQuestion.hasOwnProperty('solution')){
-            solutionText.classList.remove("hide");
         }
     }
     attempt++;

@@ -169,8 +169,10 @@ body {
   overflow: hidden;
 }
 .quiz-box .option-container .option.already-answered {
+  cursor: default;
   pointer-events: none;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
